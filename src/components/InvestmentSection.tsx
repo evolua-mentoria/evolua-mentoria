@@ -166,6 +166,9 @@ const InvestmentSection = () => {
                   <div className="text-4xl md:text-5xl font-bold text-accent mb-2">
                     R$ 697
                   </div>
+                  <p className="text-sm font-semibold text-muted-foreground mb-1">
+                    por pessoa
+                  </p>
                   <p className="text-lg text-muted-foreground">
                     ou 12x no cartão
                   </p>

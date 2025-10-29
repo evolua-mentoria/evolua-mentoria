@@ -39,18 +39,60 @@ const SolutionSection = () => {
       aria-labelledby="solution-heading"
     >
       <div className="container mx-auto px-4 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto mb-16">
+          {/* Texto à esquerda */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 id="solution-heading" className="text-4xl md:text-5xl font-bold font-poppins mb-6 leading-tight">
+              <span className="text-gradient">Blindagem Mental:</span> a mentoria que transforma sua mente na sua maior aliada.
+            </h2>
+            <p className="text-xl text-muted-foreground mb-8">
+              Conteúdo você já tem. Agora é hora de blindar seu emocional.
+            </p>
+          </motion.div>
+
+          {/* Imagem à direita */}
+          <motion.div
+            className="relative flex items-center justify-center"
+            initial={{ opacity: 0, x: 30 }}
+            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            transition={{ delay: 0.2, duration: 0.6 }}
+          >
+            <div className="relative w-full max-w-md">
+              {/* Blur decorativo de fundo */}
+              <div 
+                className="absolute -inset-8 bg-cover bg-center rounded-3xl blur-2xl opacity-40"
+                style={{
+                  backgroundImage: 'url(/images/mentoria.webp)',
+                }}
+              />
+              
+              {/* Imagem principal com estilo minimalista */}
+              <div className="relative">
+                <img
+                  src="/images/mentoria.webp"
+                  alt="Mentoria psicológica - Transformação mental"
+                  className="w-full h-auto object-contain rounded-3xl shadow-2xl"
+                  style={{
+                    filter: 'brightness(1.05) contrast(1.05)',
+                  }}
+                />
+                {/* Overlay sutil para profundidade */}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 rounded-3xl pointer-events-none"></div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16 max-w-4xl mx-auto"
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="max-w-4xl mx-auto mb-16"
         >
-          <h2 id="solution-heading" className="text-4xl md:text-5xl font-bold font-poppins mb-6 leading-tight">
-            <span className="text-gradient">Blindagem Mental:</span> a mentoria que transforma sua mente na sua maior aliada.
-          </h2>
-          <p className="text-xl text-muted-foreground mb-8">
-            Conteúdo você já tem. Agora é hora de blindar seu emocional.
-          </p>
           
           <div className="bg-primary/10 border border-primary/20 rounded-2xl p-6 mb-8">
             <h3 className="text-xl font-bold mb-4">Como funciona:</h3>

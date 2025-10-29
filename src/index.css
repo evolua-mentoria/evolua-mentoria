@@ -9,41 +9,44 @@ All colors MUST be HSL.
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 240 10% 11%;
+    --foreground: 0 0% 0%;
 
     --card: 0 0% 100%;
-    --card-foreground: 240 10% 11%;
+    --card-foreground: 0 0% 0%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 11%;
+    --popover-foreground: 0 0% 0%;
 
-    --primary: 213 100% 34%;
+    /* Azul institucional - cor principal */
+    --primary: 217 91% 60%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 46 100% 52%;
-    --secondary-foreground: 240 10% 11%;
+    /* Amarelo para destaque */
+    --secondary: 45 100% 51%;
+    --secondary-foreground: 0 0% 0%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 46 100% 52%;
-    --accent-foreground: 240 10% 11%;
+    /* Amarelo como accent */
+    --accent: 45 100% 51%;
+    --accent-foreground: 0 0% 0%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 213 100% 34%;
+    --ring: 217 91% 60%;
 
     --radius: 0.75rem;
 
-    --gradient-hero: linear-gradient(135deg, hsl(213 100% 34%) 0%, hsl(250 60% 30%) 100%);
-    --gradient-cta: linear-gradient(90deg, hsl(213 100% 34%) 0%, hsl(213 100% 44%) 100%);
-    --gradient-bonus: linear-gradient(135deg, hsl(213 100% 34%) 0%, hsl(46 100% 52%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(217 91% 50%) 100%);
+    --gradient-cta: linear-gradient(90deg, hsl(217 91% 60%) 0%, hsl(217 91% 65%) 100%);
+    --gradient-bonus: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(45 100% 51%) 100%);
     
-    --shadow-elegant: 0 10px 40px -10px hsl(213 100% 34% / 0.3);
-    --shadow-glow: 0 0 40px hsl(46 100% 52% / 0.4);
+    --shadow-elegant: 0 10px 40px -10px hsl(217 91% 60% / 0.3);
+    --shadow-glow: 0 0 40px hsl(45 100% 51% / 0.4);
     
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -169,33 +172,33 @@ All colors MUST be HSL.
 
   /* Gradientes específicos para cada seção */
   .hero-gradient {
-    background: linear-gradient(135deg, #1e40af, #9333ea);
+    background: linear-gradient(135deg, hsl(217 91% 60%), hsl(217 91% 50%));
     background-size: 200% 200%;
     animation: gradientShift 15s ease infinite;
   }
   
   .problem-gradient {
-    background: linear-gradient(to bottom, #111827, #1f2937);
+    background: linear-gradient(to bottom, hsl(0 0% 0%), hsl(0 0% 15%));
   }
   
   .solution-gradient {
-    background: linear-gradient(to right, #e0eafc, #cfdef3);
+    background: linear-gradient(to right, hsl(217 91% 95%), hsl(217 91% 98%));
   }
   
   .benefits-gradient {
-    background: linear-gradient(to bottom, #f8fafc, #e2e8f0);
+    background: linear-gradient(to bottom, hsl(0 0% 98%), hsl(217 91% 96%));
   }
   
   .mentor-gradient {
-    background: linear-gradient(to right, #f1f5f9, #ffffff);
+    background: linear-gradient(to right, hsl(0 0% 99%), hsl(0 0% 100%));
   }
   
   .investment-gradient {
-    background: linear-gradient(to bottom, #f8fafc, #e2e8f0);
+    background: linear-gradient(to bottom, hsl(217 91% 96%), hsl(0 0% 100%));
   }
   
   .cta-gradient {
-    background: linear-gradient(135deg, #1e40af, #9333ea);
+    background: linear-gradient(135deg, hsl(217 91% 60%), hsl(217 91% 55%));
   }
   
   /* Animação do gradiente */

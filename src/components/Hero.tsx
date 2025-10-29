@@ -17,54 +17,105 @@ const Hero = () => {
       </div>
 
       <div className="container mx-auto px-4 py-20 relative z-10">
-        <motion.div
-          className="max-w-4xl mx-auto text-center text-white"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8 }}
-        >
-          <motion.h1
-            className="text-3xl md:text-5xl lg:text-6xl font-bold font-poppins mb-6 leading-tight"
-            initial={{ y: 30, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.2, duration: 0.8 }}
-            role="heading"
-            aria-level="1"
+        <div className="grid lg:grid-cols-2 gap-8 items-center max-w-7xl mx-auto">
+          {/* Texto à esquerda */}
+          <motion.div
+            className="text-white"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8 }}
           >
-            Você estuda. Você sabe. Mas na hora H… trava.{" "}
-            <span className="text-accent">A culpa não é sua. É da mente que você nunca aprendeu a controlar.</span>
-          </motion.h1>
+            <motion.h1
+              className="text-3xl md:text-5xl lg:text-6xl font-bold font-poppins mb-6 leading-tight"
+              initial={{ y: 30, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.2, duration: 0.8 }}
+              role="heading"
+              aria-level="1"
+            >
+              Você estuda. Você sabe. Mas na hora H… trava.{" "}
+              <span 
+                className="block mt-3"
+                style={{
+                  color: '#FFE066',
+                  textShadow: '0 2px 8px rgba(0,0,0,0.3)',
+                }}
+              >
+                A culpa não é sua. É da mente que você nunca aprendeu a controlar.
+              </span>
+            </motion.h1>
 
-          <motion.p
-            className="text-xl md:text-2xl mb-8 text-white/90 leading-relaxed"
-            initial={{ y: 30, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
+            <motion.p
+              className="text-xl md:text-2xl mb-8 text-white/95 leading-relaxed"
+              initial={{ y: 30, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.4, duration: 0.8 }}
+            >
+              Enquanto você decora conteúdo, sua mente mina sua confiança.{" "}
+              <span 
+                className="font-semibold"
+                style={{
+                  color: '#FFF4A3',
+                  textShadow: '0 2px 6px rgba(0,0,0,0.25)',
+                }}
+              >
+                Aprenda a treinar o que realmente aprova: seu emocional.
+              </span>
+            </motion.p>
+
+            <motion.div
+              initial={{ y: 30, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.6, duration: 0.8 }}
+            >
+              <Button
+                size="lg"
+                className="bg-accent hover:bg-accent/90 text-foreground font-bold text-lg px-8 py-6 rounded-full shadow-2xl hover:shadow-accent/50 transition-all duration-300 hover:scale-105 cta-pulse"
+                onClick={() => {
+                  const checkoutSection = document.getElementById('investment');
+                  if (checkoutSection) {
+                    checkoutSection.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+              >
+                Quero garantir minha vaga com desconto
+                <ArrowRight className="ml-2" />
+              </Button>
+            </motion.div>
+          </motion.div>
+
+          {/* Imagem à direita */}
+          <motion.div
+            className="relative flex items-center justify-center"
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
           >
-            Enquanto você decora conteúdo, sua mente mina sua confiança.{" "}
-            <span className="text-accent font-semibold">Aprenda a treinar o que realmente aprova: seu emocional.</span>
-          </motion.p>
-
-          <motion.div
-            initial={{ y: 30, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.6, duration: 0.8 }}
-          >
-            <Button
-              size="lg"
-              className="bg-accent hover:bg-accent/90 text-foreground font-bold text-lg px-8 py-6 rounded-full shadow-2xl hover:shadow-accent/50 transition-all duration-300 hover:scale-105 cta-pulse"
-              onClick={() => {
-                const checkoutSection = document.getElementById('investment');
-                if (checkoutSection) {
-                  checkoutSection.scrollIntoView({ behavior: 'smooth' });
-                }
-              }}
-            >
-              Quero garantir minha vaga com desconto
-              <ArrowRight className="ml-2" />
-            </Button>
+            <div className="relative w-full max-w-md">
+              {/* Blur decorativo de fundo */}
+              <div 
+                className="absolute -inset-8 bg-cover bg-center rounded-3xl blur-2xl opacity-40"
+                style={{
+                  backgroundImage: 'url(/images/hero-img.webp)',
+                }}
+              />
+              
+              {/* Imagem principal com estilo minimalista */}
+              <div className="relative">
+                <img
+                  src="/images/hero-img.webp"
+                  alt="Mentoria psicológica para concursos - Evolua"
+                  className="w-full h-auto object-contain rounded-3xl shadow-2xl"
+                  style={{
+                    filter: 'brightness(1.05) contrast(1.05)',
+                  }}
+                />
+                {/* Overlay sutil para profundidade */}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 rounded-3xl pointer-events-none"></div>
+              </div>
+            </div>
           </motion.div>
-        </motion.div>
+        </div>
       </div>
 
       {/* Scroll indicator */}
