@@ -1,0 +1,9 @@
+{
+  "server": {
+    "fs": {
+      "deny": [
+        "C:/Users/Alex/OneDrive/**"
+      ]
+    }
+  }
+}
