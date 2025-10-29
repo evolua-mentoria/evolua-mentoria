@@ -1,5 +1,6 @@
 import { Instagram } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -31,14 +32,14 @@ const Footer = () => {
             <h4 className="font-bold mb-4">Links Rápidos</h4>
             <ul className="space-y-2 text-primary-foreground/80">
               <li>
-                <a href="/politica-privacidade" className="hover:text-accent transition-colors">
+                <Link to="/politica-privacidade" className="hover:text-accent transition-colors">
                   Política de Privacidade
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/termos-uso" className="hover:text-accent transition-colors">
+                <Link to="/termos-uso" className="hover:text-accent transition-colors">
                   Termos de Uso
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
