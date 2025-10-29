@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="hero-gradient min-h-screen flex items-center justify-center relative overflow-hidden"
+      className="hero-gradient min-h-[90vh] md:min-h-screen flex items-center justify-center relative overflow-hidden"
       role="banner"
       aria-label="Seção principal - Mentoria Blindagem Mental"
     >
@@ -16,11 +16,11 @@ const Hero = () => {
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-primary rounded-full blur-3xl" />
       </div>
 
-      <div className="container mx-auto px-4 py-20 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-8 items-center max-w-7xl mx-auto">
+      <div className="container mx-auto px-4 py-12 md:py-20 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-6 md:gap-8 items-center max-w-7xl mx-auto">
           {/* Texto à esquerda */}
           <motion.div
-            className="text-white"
+            className="text-white order-1 lg:order-1"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8 }}
@@ -70,7 +70,7 @@ const Hero = () => {
             >
               <Button
                 size="lg"
-                className="bg-accent hover:bg-accent/90 text-foreground font-bold text-lg px-8 py-6 rounded-full shadow-2xl hover:shadow-accent/50 transition-all duration-300 hover:scale-105 cta-pulse"
+                className="bg-accent hover:bg-accent/90 text-foreground font-bold text-base md:text-lg px-6 md:px-8 py-5 md:py-6 rounded-full shadow-2xl hover:shadow-accent/50 transition-all duration-300 hover:scale-105 cta-pulse w-full md:w-auto"
                 onClick={() => {
                   const checkoutSection = document.getElementById('investment');
                   if (checkoutSection) {
@@ -86,15 +86,21 @@ const Hero = () => {
 
           {/* Imagem à direita */}
           <motion.div
-            className="relative flex items-center justify-center"
+            className="relative flex items-center justify-center order-2 lg:order-2 mt-8 lg:mt-0"
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
           >
-            <div className="relative w-full max-w-md">
-              {/* Blur decorativo de fundo */}
+            <div className="relative w-full max-w-sm lg:max-w-md mx-auto">
+              {/* Blur decorativo de fundo - apenas em telas maiores */}
               <div 
-                className="absolute -inset-8 bg-cover bg-center rounded-3xl blur-2xl opacity-40"
+                className="hidden lg:block absolute -inset-8 bg-cover bg-center rounded-3xl blur-2xl opacity-40"
+                style={{
+                  backgroundImage: 'url(/images/hero-img.webp)',
+                }}
+              />
+              <div 
+                className="lg:hidden absolute -inset-4 bg-cover bg-center rounded-2xl blur-xl opacity-30"
                 style={{
                   backgroundImage: 'url(/images/hero-img.webp)',
                 }}
@@ -105,13 +111,13 @@ const Hero = () => {
                 <img
                   src="/images/hero-img.webp"
                   alt="Mentoria psicológica para concursos - Evolua"
-                  className="w-full h-auto object-contain rounded-3xl shadow-2xl"
+                  className="w-full h-auto object-contain rounded-2xl lg:rounded-3xl shadow-2xl"
                   style={{
                     filter: 'brightness(1.05) contrast(1.05)',
                   }}
                 />
                 {/* Overlay sutil para profundidade */}
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 rounded-3xl pointer-events-none"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 rounded-2xl lg:rounded-3xl pointer-events-none"></div>
               </div>
             </div>
           </motion.div>
