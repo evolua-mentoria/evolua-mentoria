@@ -71,7 +71,7 @@ const CTASection = () => {
           >
             <Button
               size="lg"
-              className="bg-accent hover:bg-accent/90 text-foreground font-bold text-base md:text-xl w-full px-0 py-6 md:px-12 md:py-8 rounded-full shadow-2xl hover:shadow-accent/50 transition-all duration-300 hover:scale-105 cta-pulse"
+              className="bg-accent hover:bg-accent/90 text-foreground font-bold text-base md:text-xl w-full px-0 py-6 md:px-12 md:py-8 rounded-full shadow-2xl hover:shadow-accent/50 transition-all duration-300 hover:scale-105 cta-pulse whitespace-normal break-words leading-snug text-center"
               onClick={() => {
                 const checkoutSection = document.getElementById('investment');
                 if (checkoutSection) {
@@ -79,8 +79,10 @@ const CTASection = () => {
                 }
               }}
             >
-              Quero garantir minha vaga com desconto — Chega de travar
-              <ArrowRight className="ml-2" size={24} />
+              <span className="block md:inline">Quero garantir minha vaga com desconto</span>
+              <span className="hidden md:inline"> — </span>
+              <span className="block md:inline">Chega de travar</span>
+              <ArrowRight className="ml-2 inline" size={24} />
             </Button>
             
             <p className="text-white/70 mt-6 text-sm text-center">
