@@ -1,5 +1,5 @@
 # Robots.txt para Evolua+ Blindagem Mental
-# https://evolua-blindagem-mental.com
+# https://evoluamentoria.netlify.app/
 
 # Permitir todos os crawlers
 User-agent: *
@@ -37,7 +37,7 @@ Disallow: /eslint.config.js
 Disallow: /postcss.config.js
 
 # Sitemap
-Sitemap: https://evolua-blindagem-mental.com/sitemap.xml
+Sitemap: https://evoluamentoria.netlify.app/sitemap.xml
 
 # Crawl-delay para evitar sobrecarga
 Crawl-delay: 1
