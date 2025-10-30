@@ -29,7 +29,7 @@ const CTASection = () => {
         <div className="absolute bottom-10 left-10 w-96 h-96 bg-primary rounded-full blur-3xl animate-pulse" />
       </div>
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-4 relative z-10 pt-24 md:pt-32">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -71,7 +71,7 @@ const CTASection = () => {
           >
             <Button
               size="lg"
-              className="bg-accent hover:bg-accent/90 text-foreground font-bold text-xl px-12 py-8 rounded-full shadow-2xl hover:shadow-accent/50 transition-all duration-300 hover:scale-105 cta-pulse"
+              className="bg-accent hover:bg-accent/90 text-foreground font-bold text-base md:text-xl w-full px-0 py-6 md:px-12 md:py-8 rounded-full shadow-2xl hover:shadow-accent/50 transition-all duration-300 hover:scale-105 cta-pulse"
               onClick={() => {
                 const checkoutSection = document.getElementById('investment');
                 if (checkoutSection) {

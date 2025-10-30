@@ -164,7 +164,7 @@ const InvestmentSection = () => {
                 {/* Preços */}
                 <div className="text-center mb-6">
                   <div className="text-4xl md:text-5xl font-bold text-accent mb-2">
-                    R$ 697
+                    R$ 497
                   </div>
                   <p className="text-sm font-semibold text-muted-foreground mb-1">
                     por pessoa
@@ -204,7 +204,7 @@ const InvestmentSection = () => {
                   size="lg"
                   className="bg-accent hover:bg-accent/90 text-foreground font-bold text-lg px-8 py-4 rounded-full shadow-2xl hover:shadow-accent/50 transition-all duration-300 hover:scale-105 cta-pulse w-full"
                   onClick={() => {
-                    const message = encodeURIComponent("Olá, Alexandre! Quero garantir minha vaga na MENTORIA EM GRUPO (R$ 697) do projeto Evolua – Mentoria psicológica para concursos. Tenho interesse nos 4 encontros em grupo de 80 minutos.");
+                    const message = encodeURIComponent("Olá, Alexandre! Quero garantir minha vaga na MENTORIA EM GRUPO (R$ 497) do projeto Evolua – Mentoria psicológica para concursos. Tenho interesse nos 4 encontros em grupo de 80 minutos.");
                     window.open(`https://wa.me/+5587981294783?text=${message}`, '_blank');
                   }}
                 >
